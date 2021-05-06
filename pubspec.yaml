@@ -15,6 +15,7 @@ dependencies:
   get: ^4.1.4
   pedantic: ^1.11.0
   google_fonts: ^2.0.0
+  http: ^0.13.3
 
 dev_dependencies:
   flutter_test:
