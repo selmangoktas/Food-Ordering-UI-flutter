@@ -2,59 +2,95 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:neumorphism/config/colors.dart';
 
-
 class Styles {
-  static const appBarText = TextStyle(
-    fontSize: 20.0,
+  static TextStyle appBarText = GoogleFonts.getFont(
+    'Rubik',
     fontWeight: FontWeight.w600,
-    color: white,
+    color: black,
   );
+
   static const appBarSubText = TextStyle(
     fontSize: 15.0,
     fontWeight: FontWeight.w600,
     color: white,
   );
 
-  static TextStyle okunmaSayisi = GoogleFonts.getFont(
+  static TextStyle puanSayisi = GoogleFonts.getFont(
     'Rubik',
     fontSize: 25,
-    color: primary,
+    color: black,
   );
-
-  static TextStyle okunmaSayisiAlt = GoogleFonts.getFont(
+  static TextStyle yorumSayisi = GoogleFonts.getFont(
     'Rubik',
-    fontSize: 10,
-    color: secondary,
+    fontSize: 25,
+    color: grey,
   );
 
-  static const buttonTextStyle = TextStyle(
-    fontSize: 12,
-    //color: primary,
+  static TextStyle yemekAdi = GoogleFonts.getFont(
+    'Rubik',
+    fontSize: 25,
+    color: black,
+  );
+
+  static TextStyle yemekAciklama = GoogleFonts.getFont(
+    'Rubik',
+    fontSize: 25,
+    color: grey,
+  );
+
+  static TextStyle buttonTextStyle = GoogleFonts.getFont(
+    'Rubik',
+    fontSize: 16,
+    color: white,
+    backgroundColor: primary,
+    //fontWeight: FontWeight.w800,
+  );
+
+  static TextStyle yemekFiyat = GoogleFonts.getFont(
+    'Rubik',
+    fontSize: 16,
+    color: primary,
     fontWeight: FontWeight.w800,
   );
 
-  static const chartLabelsTextStyle = TextStyle(
-    color: Colors.grey,
-    fontSize: 14.0,
-    fontWeight: FontWeight.w500,
-  );
-
-  static const tabTextStyle = TextStyle(
-    fontSize: 16.0,
-    fontWeight: FontWeight.w600,
-    color: secondary,
-  );
-
-  static const subTextStyle = TextStyle(
-    fontSize: 18.0,
-    fontWeight: FontWeight.w600,
-    color: primary,
-  );
-
-  static TextStyle buttonText = GoogleFonts.getFont(
+  static TextStyle yemekSayiCart = GoogleFonts.getFont(
     'Rubik',
-    fontSize: 25,
-    color: secondary,
+    fontSize: 16,
+    color: black,
+    //backgroundColor: primary,
+    fontWeight: FontWeight.w800,
+  );
+
+  static TextStyle yemekAdiCart = GoogleFonts.getFont(
+    'Rubik',
+    fontSize: 16,
+    color: black,
+    //backgroundColor: primary,
+    fontWeight: FontWeight.w800,
+  );
+
+  static TextStyle yemekKaloriCart = GoogleFonts.getFont(
+    'Rubik',
+    fontSize: 16,
+    color: grey,
+    //backgroundColor: primary,
+    fontWeight: FontWeight.w800,
+  );
+
+  static TextStyle yemekToplamFiyatCart = GoogleFonts.getFont(
+    'Rubik',
+    fontSize: 16,
+    color: black,
+    //backgroundColor: primary,
+    fontWeight: FontWeight.w800,
+  );
+
+  static TextStyle yemekToplamCart = GoogleFonts.getFont(
+    'Rubik',
+    fontSize: 14,
+    color: black,
+    //backgroundColor: primary,
+    fontWeight: FontWeight.w600,
   );
 
   static BoxDecoration appBarboxDecoration = BoxDecoration(

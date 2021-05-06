@@ -11,6 +11,7 @@ class Messages extends Translations {
           'addCart':'Add to Cart',
           'order':'My Order',
           'money':'\$',
+          'pay':'Pay'
           
         },
         'tr_TR': {
@@ -21,6 +22,7 @@ class Messages extends Translations {
           'addCart':'Sepete Ekle',
           'order':'Sepetim',
           'money':'TL',
+          'pay':'Ödeme Ekranı'
         }
       };
 }

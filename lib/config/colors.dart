@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class HexColor extends Color {
   static int _getColorFromHex(String hexColor) {
     hexColor = hexColor.toUpperCase().replaceAll('#', '');
@@ -13,7 +12,7 @@ class HexColor extends Color {
   HexColor(final String hexColor) : super(_getColorFromHex(hexColor));
 }
 
-const Color primary = Color(0xff5F0F40);
+const Color primary = Color(0xff2dc879);
 const Color medium = Color(0xff9A031E);
 const Color secondary = Color(0xffFB8B24);
 const Color accent = Color(0xFFE36414);
@@ -59,6 +58,5 @@ const Color lineTextGrey = Color(0xff9E9E9E);
 const Color darkModeButton = Color(0xff2F3641);
 const Color lightModeButton = Color(0xff000000);
 const Color darkBgCircle = Color(0xff2F3641);
-
 
 const Color transparent = Colors.transparent;

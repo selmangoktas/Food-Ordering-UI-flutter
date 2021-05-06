@@ -9,6 +9,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  
     final ThemeState themeState = Get.put(ThemeState());
 
   @override
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Food Ordering UI flutter',
        theme: themeState.currentTheme,
-      home: Splash(),
+      home: MySplashApp(),
     );
   }
 }

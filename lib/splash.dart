@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:neumorphism/view/page_controller.dart';
 
-
 class MySplashApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -13,7 +12,6 @@ class MySplashApp extends StatelessWidget {
         // Show splash screen while waiting for app resources to load:
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Splash();
-         
         } else {
           // Loading is done, return the app:
           return pageControllerViewPage();

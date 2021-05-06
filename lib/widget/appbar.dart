@@ -17,49 +17,55 @@ class _appBarToolWidgetState extends State<appBarToolWidget> {
     return GetBuilder<ThemeState>(
       builder: (val) {
         return Container(
+          height: context.sizeH(.4),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Container(
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                 ),
-                width: context.sizeH(.2),
-                height: context.sizeH(.2),
+                width: context.sizeW(.1),
+                height: context.sizeH(.1),
                 child: Icon(Icons.arrow_left),
               ),
-              Container(
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
+              Align(
+                alignment: Alignment.center,
+                child: Container(
+                  width: context.sizeW(.7),
+                  child: Text('title'.tr ?? 'My Producy'),
                 ),
-                width: context.sizeH(.2),
-                height: context.sizeH(.2),
-                child: Text('title'.tr ?? 'My Producy'),
               ),
               Container(
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
+                width: context.sizeW(.1),
+                child: Row(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                      ),
+                      width: context.sizeW(.1),
+                      height: context.sizeH(.1),
+                      child: Icon(Icons.arrow_left),
+                    ),
+                    Container(
+                      width: context.sizeW(.1),
+                      child: InkWell(
+                        onTap: () {
+                          val.changeLocale(
+                            val.locale == Locale('tr', 'TR')
+                                ? Locale('en', 'US')
+                                : Locale('tr', 'TR'),
+                          );
+                        },
+                        child: Icon(
+                          Icons.language,
+                        ),
+                      ),
+                    )
+                  ],
                 ),
-                width: context.sizeH(.2),
-                height: context.sizeH(.2),
-                child: Icon(Icons.arrow_left),
               ),
-              Container(
-                width: context.sizeH(.2),
-                height: context.sizeH(.2),
-                child: InkWell(
-                  onTap: () {
-                    val.changeLocale(
-                      val.locale == Locale('tr', 'TR')
-                          ? Locale('en', 'US')
-                          : Locale('tr', 'TR'),
-                    );
-                  },
-                  child: Icon(
-                    Icons.language,
-                  ),
-                ),
-              )
             ],
           ),
         );

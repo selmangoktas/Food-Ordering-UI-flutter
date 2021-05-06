@@ -9,16 +9,19 @@ var foodsJson = [
     'score': '4',
     'like': 'true',
     'comment': {
-      'reviews': [{
-        'userId': '1',
-        'user': 'Selman GÖKTAŞ',
-        'comment': 'Kanatlar Soğuk bide tavuk gıdaklıyordu.Ellerinize sağlık..',
-      },
-      {
-        'userId': '2',
-        'user': 'John Doe ',
-        'comment': 'Ellerinize sağlık..',
-      }]
+      'reviews': [
+        {
+          'userId': '1',
+          'user': 'Selman GÖKTAŞ',
+          'comment':
+              'Kanatlar Soğuk bide tavuk gıdaklıyordu.Ellerinize sağlık..',
+        },
+        {
+          'userId': '2',
+          'user': 'John Doe ',
+          'comment': 'Ellerinize sağlık..',
+        }
+      ]
     }
   },
   {
