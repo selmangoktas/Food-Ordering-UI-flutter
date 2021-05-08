@@ -9,16 +9,6 @@ class productViewPage extends StatefulWidget {
 class _productViewPageState extends State<productViewPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Container(
-            child: Text('urun listesi '),
-          ),
-          urunListelemeWidget(),
-        ],
-      ),
-    );
+    return urunListelemeWidget();
   }
 }

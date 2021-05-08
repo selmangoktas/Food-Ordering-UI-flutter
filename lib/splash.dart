@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:neumorphism/view/page_controller.dart';
 
 class MySplashApp extends StatelessWidget {

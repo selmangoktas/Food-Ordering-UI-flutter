@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:neumorphism/config/screen.dart';
 import 'package:neumorphism/config/styles.dart';
 import 'package:neumorphism/services/foods/foodServices.dart';
+import 'package:neumorphism/view/product/prduct-detail.dart';
 
 class urunListelemeWidget extends StatefulWidget {
   @override
@@ -24,7 +25,7 @@ class _urunListelemeWidgetState extends State<urunListelemeWidget> {
       builder: (value) {
         print(value);
         return ListView.separated(
-          physics: NeverScrollableScrollPhysics(),
+          physics: ClampingScrollPhysics(),
           shrinkWrap: true,
           itemCount: value.myList.length,
           separatorBuilder: (BuildContext context, int index) {
@@ -81,24 +82,35 @@ class _urunListelemeWidgetState extends State<urunListelemeWidget> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceEvenly,
                                         children: [
-                                          Icon(Icons.arrow_back),
+                                          Text(
+                                            '-',
+                                            style: Styles.yemekFiyat,
+                                          ),
                                           Text(
                                             '2',
                                             style: Styles.yemekSayiCart,
                                           ),
-                                          Icon(Icons.arrow_forward),
+                                          Text(
+                                            '+',
+                                            style: Styles.yemekFiyat,
+                                          ),
                                         ],
                                       ),
                                     ),
                                   ),
-                                  Align(
-                                    alignment: Alignment.topRight,
-                                    child: Container(
-                                      width: context.sizeW(.4),
-                                      height: context.sizeW(.4),
-                                      child: Image.asset(
-                                        list.image,
-                                        fit: BoxFit.cover,
+                                  InkWell(
+                                    onTap: () {
+                                      Get.to(ProductDetailViewPage());
+                                    },
+                                    child: Align(
+                                      alignment: Alignment.topRight,
+                                      child: Container(
+                                        width: context.sizeW(.4),
+                                        height: context.sizeW(.4),
+                                        child: Image.asset(
+                                          list.image,
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
                                     ),
                                   ),

@@ -12,6 +12,7 @@ class FoodServices extends GetxController {
     var json = foodsJson;
 
     if (json != null) {
+      myList.clear();
       bilgi = GetPostEnum.Loading;
       for (var item in json) {
         myList.add(foodModel.fromJson(item));
