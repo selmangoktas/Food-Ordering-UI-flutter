@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:neumorphism/config/styles.dart';
 import 'package:neumorphism/theme/theme_state.dart';
 import 'package:neumorphism/config/screen.dart';
 
@@ -12,6 +13,7 @@ class appBarToolWidget extends StatefulWidget {
 }
 
 class _appBarToolWidgetState extends State<appBarToolWidget> {
+  
   @override
   Widget build(BuildContext context) {
     return PreferredSize(
@@ -23,7 +25,7 @@ class _appBarToolWidgetState extends State<appBarToolWidget> {
               height: context.sizeH(.2),
               width: context.sizeW(1),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     decoration: BoxDecoration(
@@ -36,8 +38,12 @@ class _appBarToolWidgetState extends State<appBarToolWidget> {
                   Align(
                     alignment: Alignment.center,
                     child: Container(
-                      width: context.sizeW(.3),
-                      child: Text('title'.tr ?? 'My Producy'),
+                      width: context.sizeW(.35),
+                      child: Text(
+                        widget.title.tr ?? 'My Producy',
+                        style: Styles.appBarSubText,
+                        maxLines: 1,
+                      ),
                     ),
                   ),
                   Container(

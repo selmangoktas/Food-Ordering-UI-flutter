@@ -6,23 +6,22 @@ class Messages extends Translations {
         'en_US': {
           'newuser': 'Add new user',
           'title': 'Home Page',
-          'food':'Foods',
-          'price':'Price',
-          'addCart':'Add to Cart',
-          'order':'My Order',
-          'money':'\$',
-          'pay':'Pay'
-          
+          'food': 'Foods',
+          'price': 'Price',
+          'addCart': 'Add to Cart',
+          'order': 'My Order',
+          'money': '\$ ',
+          'pay': 'Pay'
         },
         'tr_TR': {
-           'newuser': 'Yeni Kullanıcı Ekle',
+          'newuser': 'Yeni Kullanıcı Ekle',
           'title': 'Ansayfa',
-          'food':'Yemekler',
-          'price':'Fiyat',
-          'addCart':'Sepete Ekle',
-          'order':'Sepetim',
-          'money':'TL',
-          'pay':'Ödeme Ekranı'
+          'food': 'Yemekler',
+          'price': 'Fiyat',
+          'addCart': 'Sepete Ekle',
+          'order': 'Sepetim',
+          'money': '\$ TL',
+          'pay': 'Ödeme Ekranı'
         }
       };
 }

@@ -5,6 +5,7 @@ import 'package:neumorphism/config/screen.dart';
 import 'package:neumorphism/config/styles.dart';
 import 'package:neumorphism/services/foods/foodServices.dart';
 import 'package:neumorphism/view/product/prduct-detail.dart';
+import 'package:neumorphism/widget/miktar.dart';
 
 class urunListelemeWidget extends StatefulWidget {
   @override
@@ -23,14 +24,16 @@ class _urunListelemeWidgetState extends State<urunListelemeWidget> {
   Widget build(BuildContext context) {
     return GetBuilder<FoodServices>(
       builder: (value) {
-        print(value);
+        //print(value);
         return ListView.separated(
           physics: ClampingScrollPhysics(),
           shrinkWrap: true,
           itemCount: value.myList.length,
           separatorBuilder: (BuildContext context, int index) {
             return Container(
-              child: space,
+              child: SizedBox(
+                height: 30,
+              ),
             );
           },
           itemBuilder: (context, index) {
@@ -76,27 +79,7 @@ class _urunListelemeWidgetState extends State<urunListelemeWidget> {
                                   ),
                                   Align(
                                     alignment: Alignment.bottomLeft,
-                                    child: Container(
-                                      width: context.sizeW(.2),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceEvenly,
-                                        children: [
-                                          Text(
-                                            '-',
-                                            style: Styles.yemekFiyat,
-                                          ),
-                                          Text(
-                                            '2',
-                                            style: Styles.yemekSayiCart,
-                                          ),
-                                          Text(
-                                            '+',
-                                            style: Styles.yemekFiyat,
-                                          ),
-                                        ],
-                                      ),
-                                    ),
+                                    child: MiktarBuild(),
                                   ),
                                   InkWell(
                                     onTap: () {
@@ -121,9 +104,17 @@ class _urunListelemeWidgetState extends State<urunListelemeWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  '\$ ' + list.price,
-                                  style: Styles.yemekFiyat,
+                                Row(
+                                  children: [
+                                    Text(
+                                      'money'.tr,
+                                      style: Styles.yemekFiyat,
+                                    ),
+                                    Text(
+                                      list.price,
+                                      style: Styles.yemekFiyat,
+                                    ),
+                                  ],
                                 ),
                                 SizedBox(
                                   width: context.sizeW(.45),
@@ -134,7 +125,7 @@ class _urunListelemeWidgetState extends State<urunListelemeWidget> {
                                   ),
                                 ),
                                 Text(
-                                  list.calori,
+                                  list.calori + ' kcal',
                                   style: Styles.yemekKaloriCart,
                                 ),
                               ],

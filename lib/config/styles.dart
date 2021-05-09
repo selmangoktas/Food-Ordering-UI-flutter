@@ -6,13 +6,15 @@ class Styles {
   static TextStyle appBarText = GoogleFonts.getFont(
     'Rubik',
     fontWeight: FontWeight.w600,
+    fontSize: 20,
     color: black,
+    letterSpacing: 2,
   );
 
   static const appBarSubText = TextStyle(
-    fontSize: 15.0,
-    fontWeight: FontWeight.w600,
-    color: white,
+    fontSize: 25.0,
+    fontWeight: FontWeight.w700,
+    color: black,
   );
 
   static TextStyle puanSayisi = GoogleFonts.getFont(
@@ -48,15 +50,23 @@ class Styles {
 
   static TextStyle yemekFiyat = GoogleFonts.getFont(
     'Rubik',
-    fontSize: 16,
+    fontSize: 30,
     color: primary,
-    fontWeight: FontWeight.w800,
+    fontWeight: FontWeight.w600,
   );
 
   static TextStyle yemekSayiCart = GoogleFonts.getFont(
     'Rubik',
-    fontSize: 16,
+    fontSize: 30,
     color: black,
+    //backgroundColor: primary,
+    fontWeight: FontWeight.w800,
+  );
+
+  static TextStyle yemekSayiAzaltEksilCart = GoogleFonts.getFont(
+    'Rubik',
+    fontSize: 30,
+    color: primary,
     //backgroundColor: primary,
     fontWeight: FontWeight.w800,
   );
