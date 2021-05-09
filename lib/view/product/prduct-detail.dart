@@ -11,6 +11,7 @@ import 'package:get/get.dart';
 foodModel x = foodModel();
 
 class ProductDetailViewPage extends StatefulWidget {
+  
   @override
   _ProductDetailViewPageState createState() => _ProductDetailViewPageState();
 }

@@ -40,7 +40,7 @@ class _appBarToolWidgetState extends State<appBarToolWidget> {
                     child: Container(
                       width: context.sizeW(.35),
                       child: Text(
-                        widget.title.tr ?? 'My Producy',
+                        widget.title.tr ?? 'My Product',
                         style: Styles.appBarSubText,
                         maxLines: 1,
                       ),

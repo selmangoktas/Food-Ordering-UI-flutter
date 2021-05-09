@@ -20,7 +20,7 @@ class Messages extends Translations {
           'price': 'Fiyat',
           'addCart': 'Sepete Ekle',
           'order': 'Sepetim',
-          'money': '\$ TL',
+          'money': 'TL',
           'pay': 'Ödeme Ekranı'
         }
       };

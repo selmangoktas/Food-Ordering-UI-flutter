@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:neumorphism/config/screen.dart';
 import 'package:neumorphism/config/styles.dart';
+import 'package:neumorphism/services/cart/addCart.dart';
 
 class MiktarBuild extends StatelessWidget {
   const MiktarBuild({
@@ -9,26 +11,39 @@ class MiktarBuild extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var f = cartController();
     return Container(
       width: context.sizeW(.3),
       //height: 29,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Text(
-            '-',
-            style: Styles.yemekSayiAzaltEksilCart,
-          ),
-          Text(
-            '2',
-            style: Styles.yemekSayiCart,
-          ),
-          Text(
-            '+',
-            style: Styles.yemekSayiAzaltEksilCart,
-          ),
-        ],
-      ),
+      child: Obx(() {
+        return Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            InkWell(
+              onTap: () {
+                f.urunCikar(f.urunSayisi);
+              },
+              child: Text(
+                '-',
+                style: Styles.yemekSayiAzaltEksilCart,
+              ),
+            ),
+            Text(
+              f.urunSayisi.value.toString(),
+              style: Styles.yemekSayiCart,
+            ),
+            InkWell(
+              onTap: () {
+                f.urunEkle(f.urunSayisi);
+              },
+              child: Text(
+                '+',
+                style: Styles.yemekSayiAzaltEksilCart,
+              ),
+            ),
+          ],
+        );
+      }),
     );
   }
 }
