@@ -19,18 +19,20 @@ class Styles {
 
   static TextStyle puanSayisi = GoogleFonts.getFont(
     'Rubik',
-    fontSize: 25,
+    fontSize: 20,
+    fontWeight: FontWeight.w800,
     color: black,
   );
   static TextStyle yorumSayisi = GoogleFonts.getFont(
     'Rubik',
-    fontSize: 25,
+    fontSize: 16,
     color: grey,
   );
 
   static TextStyle yemekAdi = GoogleFonts.getFont(
     'Rubik',
-    fontSize: 25,
+    fontSize: 30,
+    fontWeight: FontWeight.w800,
     color: black,
   );
 
@@ -45,7 +47,6 @@ class Styles {
     fontSize: 16,
     color: white,
     backgroundColor: primary,
-    //fontWeight: FontWeight.w800,
   );
 
   static TextStyle yemekFiyat = GoogleFonts.getFont(

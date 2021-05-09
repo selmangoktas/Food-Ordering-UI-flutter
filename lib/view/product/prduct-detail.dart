@@ -47,21 +47,39 @@ class _ProductDetailViewPageState extends State<ProductDetailViewPage> {
               children: [
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('4,8'),
-                    Text('2023 reviews'),
+                    Text(
+                      '4,8',
+                      style: Styles.puanSayisi,
+                    ),
+                    Text('2023 reviews', style: Styles.yorumSayisi),
                     buildRatingStars(3),
                   ],
                 ),
-                Icon(Icons.favorite)
+                Container(
+                  child: Icon(
+                    Icons.favorite,
+                    color: Colors.redAccent[700],
+                    size: 45,
+                  ),
+                )
               ],
             ),
             Container(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text('Yemek Başloıkk'),
                   Text(
-                      'alt baslık tanımlama alt baslık tanımlama alt baslık tanımlama alt baslık tanımlama alt baslık tanımlama alt baslık tanımlama alt baslık tanımlama alt baslık tanımlama alt baslık tanımlama alt baslık tanımlama'),
+                    'Yemek Başloıkk',
+                    style: Styles.yemekAdi,
+                    textAlign: TextAlign.justify,
+                  ),
+                  Text(
+                    'alt baslık tanımlama alt baslık tanımlama alt baslık tanımlama alt baslık tanımlama alt baslık tanımlama alt baslık tanımlama alt baslık tanımlama alt baslık tanımlama alt baslık tanımlama alt baslık tanımlama',
+                    style: Styles.yemekAciklama,
+                    textAlign: TextAlign.justify,
+                  ),
                 ],
               ),
             )

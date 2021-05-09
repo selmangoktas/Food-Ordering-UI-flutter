@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:neumorphism/config/styles.dart';
 
 Text buildRatingStars(int rating) {
   var stars = '';
@@ -8,5 +9,8 @@ Text buildRatingStars(int rating) {
 
   stars.trim();
 
-  return Text(stars);
+  return Text(
+    stars,
+    style: Styles.yorumSayisi,
+  );
 }
