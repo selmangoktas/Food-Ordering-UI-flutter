@@ -2,6 +2,10 @@
 
 A new Flutter project.
 
+<Food-Ordering-UI-flutter>
+
+| <img src="/assets/demo/food1.jpg" width="250"> | <img src="/assets/demo/food2.jpg" width="250"> |
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

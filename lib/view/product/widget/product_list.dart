@@ -5,7 +5,6 @@ import 'package:neumorphism/config/screen.dart';
 import 'package:neumorphism/config/styles.dart';
 import 'package:neumorphism/services/foods/foodServices.dart';
 import 'package:neumorphism/view/product/prduct-detail.dart';
-import 'package:neumorphism/widget/miktar.dart';
 
 class urunListelemeWidget extends StatefulWidget {
   @override
@@ -77,10 +76,10 @@ class _urunListelemeWidgetState extends State<urunListelemeWidget> {
                                       ),
                                     ),
                                   ),
-                                  Align(
+                                  /*  Align(
                                     alignment: Alignment.bottomLeft,
                                     child: MiktarBuild(),
-                                  ),
+                                  ),*/
                                   InkWell(
                                     onTap: () {
                                       Get.to(ProductDetailViewPage());
